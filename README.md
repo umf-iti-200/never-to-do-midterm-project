@@ -1,2 +1,3 @@
-# never-to-do-midterm-project
+# Never To-do
+**Milestone:** Midterm Project
  
