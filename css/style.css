@@ -1,0 +1,7 @@
+body {
+    margin-top: 70px;
+}
+
+#not-done label{
+    text-decoration: line-through;
+}
