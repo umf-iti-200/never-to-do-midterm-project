@@ -2,6 +2,14 @@ body {
     margin-top: 70px;
 }
 
-#not-done label{
+#not-done label {
     text-decoration: line-through;
+}
+
+.list-group-item label {
+    cursor: pointer !important;
+}
+
+.list-group-item input {
+    cursor: pointer !important;
 }
