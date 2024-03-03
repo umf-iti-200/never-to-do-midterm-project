@@ -3,11 +3,11 @@ let COUNT_ID = 4;
 
 $(function () {
 
-    // Every time the user opens the list, all never-do checkboxes should not be checked
-    $("#never-do .form-check-input").prop("checked", false);
+    // Every time the user opens the list, all to-do checkboxes should not be checked
+    $("#to-do .form-check-input").prop("checked", false);
 
-    // Every time the user opens the list, all not-done checkboxes should be checked
-    $("#not-done .form-check-input").prop("checked", true);
+    // Every time the user opens the list, all done checkboxes should be checked
+    $("#done .form-check-input").prop("checked", true);
 
     $("#btn-new").click(function () {
 
@@ -24,7 +24,7 @@ $(function () {
             return;
         }
 
-        $("#never-do").append(`
+        $("#to-do").append(`
             <li class="list-group-item d-flex justify-content-between align-items-center">
                 <input class="form-check-input me-1" type="checkbox" value="" id="${COUNT_ID}">
                 <div class="ms-2 me-auto">
@@ -44,16 +44,16 @@ $(function () {
         }
     });
 
-    $(document).on("change", "#never-do .form-check-input", function () {
+    $(document).on("change", "#to-do .form-check-input", function () {
 
-        $("#not-done").append($(this).parent().clone())
+        $("#done").append($(this).parent().clone())
 
         $(this).parent().remove();
     });
 
-    $(document).on("change", "#not-done .form-check-input", function () {
+    $(document).on("change", "#done .form-check-input", function () {
 
-        $("#never-do").append($(this).parent().clone())
+        $("#to-do").append($(this).parent().clone())
 
         $(this).parent().remove();
     });
